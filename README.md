@@ -1,62 +1,10 @@
-*TODO*
+Conversion of Goblin Stone’s MVC website to React SSR.
 
-SHELL IMPROVEMENT:
-- Implement a clientPage higher order component (move isSpa from route to component)
-- Add Search and Account features in app shell
-- Evaluate whether to stretch the footer oustide the viewport (the width of the main body changes because of the scrollbar)
-- Add accessibility support on mobile screens:
-  * Add some kind of effect when the user clicks on or selects a button, etc...
-  * Make sure the navbar tab works in mobile and that the rest of the page doesn't have tabs enabled
-- Finish the advertisement sidebar
-- Evaluate options to have responsive sidebar components
-
-WEBSITE IMPROVEMENT:
-- In .Net, make sure the API returns a 404 error when a resource doesn't exist
-- Implement clean server side errors and eventually add an 500 Epic Fail page (and create an error handler).
-- Investigate what the best practices are with regards to rendering dates, and eventually find a way to display dates using the client's locale without triggering a hydration error.
-- Implement tags and add them to the ArticlesList
-- Implement generic redirects when an API returns a Forbidden, Error, or Not Found error (both client and server side).
-- Make sure that react doesn't let you create script files from props or state (example name = <script>alert('hi')</script>). It's OK for setDangerousHtml if the content is 100% mine.
-- Adjust the paddings in the Article List component on medium and small screens (the margins are huge!)
-
-DOCKER:
-- Create a clean data migration app
-- Verify that the web server still works after the Web Server Improvements
-- Try passing the database connection string as an environment variable
-- Use environment variables in Nginx images (see https://serverfault.com/questions/577370/how-can-i-use-environment-variables-in-nginx-conf)
-- Add package-lock to Dockerfiles to avoid installing new package versions
-- Wait for SQL Server to be ready before starting the API project
-- Try to create a dockerfile for the database
-
-CI/CD:
-- Add unit tests
-- Add some Jest tests with React Testing Libary
-- Setup a pipeline to build and deploy docker images (see service principal for authentication https://docs.microsoft.com/en-us/azure/container-registry/container-registry-authentication#service-principal)
-- Setup a pipeline to run tests
-- Setup a continous delivery pipeline with Azure App Services
-
-CACHE MANAGEMENT:
-*Frequently Accessed (like articles):
-- Permanent cache
-- Results are saved
-- Cache cleared when changes occured (article, tags, comments, etc.)
-
-*Images:
-- Use a shared volume
-- Copy the image in the API (when used, at start-up, have some kind of background worker)
-- Have nginx use try_files for some routes and have nginx serve the images
-
-LATER:
-- AZURE: Add custom domain with https
-- Investigate sitemaps for SEO
-- Investigate link canonical for SEO
-- Investigate app shell https://developers.google.com/web/updates/2015/11/app-shell
-- Investigate SSR strategies https://midu.dev/frontendcon-links/
-- Investigate performance enhancements with https://houssein.me/progressive-react
-- Implement authorization
-- Add google analytics (don't forget to check https://philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site-i-build/ and https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript for ideas on how to optimize this)
-- Add progressive web app support (see previews articles while offline)
-- NGINX: Evaluate whether to use https and http/2 or not with Azure. It appears that using http2 on the same server is bad (http://nginx.org/en/docs/http/ngx_http_v2_module.html / https://medium.com/@Grigorkh/how-to-set-up-nginx-with-http-2-support-e822d5dae8ca)
-- WEB:Load articles based on viewport height and load articles as the user scrolls down
-- Implement dynamic environmental variables
-- Evaluate the need to add more logging options in Azure (right now, the logs are on disk). Use Elastic?
+The SSR server features
+- Asynchronous React SSR
+-	Preloading of data on the server side
+-	Support for CSS modules
+-	Dual server/client webpack configurations
+-	React Helmet Async for social sharing
+-	Code splitting
+-	Dev server with hot reload and browser refresh
