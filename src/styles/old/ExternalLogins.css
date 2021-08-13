@@ -1,0 +1,36 @@
+﻿.ExternalLoginContainer {
+    padding:5px;
+}
+
+.ExternalLoginButton {
+    background:none;
+}
+
+.ExternalLoginButton img {
+    cursor: pointer;
+    height: 36px;
+    width: auto;
+    padding: 5px 5px 5px 0px;
+}
+
+.RemoveExternalLoginButton {
+    display:inline-block;
+    padding:5px;
+}
+
+.RemoveExternalLoginButton .TextButton {
+    cursor: pointer;
+    text-align:center;
+    display:block;
+    width:100%;
+    padding-bottom:5px;
+    background:none;
+}
+
+.RemoveExternalLoginButton .ImageButton {
+    cursor: pointer;
+    height: 36px;
+    width: auto;
+    padding: 5px 5px 0px 5px;
+    background:none;
+}

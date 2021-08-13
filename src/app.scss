@@ -1,0 +1,150 @@
+@use 'Source/styles/common.scss';
+
+$navbar-width: 250px;
+
+* {
+  border-style: none;
+  border-color: inherit;
+  border-width: medium;
+  padding: 0px;
+  border-spacing:0px;
+  margin: 0px;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-size: 92.8%; // Base font size: 14px
+  font-family: Cambria;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: common.$body-color;
+
+  &.menu-toggled {
+    overflow-y: hidden;
+  
+    > #root {
+      transform: translateX($navbar-width);
+    }
+
+    > #root > nav {
+      visibility: visible;
+    }
+  }
+}
+
+#root {
+  margin: 0px common.$screen-sm-m;
+  display: flex;
+  flex-direction: column;
+  transition: transform 200ms;
+  min-height: 100%;
+  will-change: tranform;
+
+  > header {
+    background-color: common.$primary-color-light;
+  }
+
+  > nav {
+    min-height: 100%;
+    position: fixed;
+    width: $navbar-width;
+    left: -1*common.$screen-sm-m;
+    background-color: #555;
+    top: 0px;
+    display: flex;
+    visibility: hidden;
+    transform: translateX(-$navbar-width);
+    transition: visibility 200ms;
+    will-change: visibility;
+  }
+
+  > main {
+    padding: common.$screen-sm-m;
+    flex-grow: 1;
+    background-color: common.$page-color;
+  }
+
+  > footer {
+    > div {
+      background-color: common.$primary-color-light;
+      padding: common.$screen-sm-m;
+    }
+  }
+}
+
+@include common.md {
+  #root {
+    margin: 0px common.$screen-md-m;
+
+    > header {
+      border-radius: 5px 5px 0px 0px;
+      margin-top: common.$screen-md-m;
+    }
+
+    > nav {
+      left: -1*common.$screen-md-m;
+    }
+
+    > main {
+      padding: common.$screen-md-m;
+    }
+
+    > footer {
+      padding-bottom: common.$screen-md-m;
+
+      > div {
+        padding: common.$screen-md-m;
+        border-radius: 0px 0px 5px 5px;
+      }
+    }
+  }
+}
+
+@include common.lg {
+  #root {
+    margin: 0px;
+
+    > header, main, footer, nav {
+      margin: 0px auto;
+      min-width: 720px;
+      max-width: 950px;
+      width: 70%;
+    }
+
+    > header {
+      margin-top: 30px;
+      padding: 0px common.$screen-lg-m;
+    }
+
+    > main {
+      padding: common.$screen-lg-m;
+    }
+
+    > nav {
+      border-bottom: common.$primary-color-light 1px solid;
+      padding: 0px common.$screen-lg-m;
+      min-height: initial;
+      position: initial;
+      left: initial;
+      background-color:#585858;
+      background-image: linear-gradient(to bottom, #585858, #3d3d3d);
+      top: initial;
+      display: flex;
+      visibility: initial;
+      transform: none;
+    }
+
+    > footer {
+      padding-bottom: 30px;
+
+      > div {
+        margin: 0px -1*common.$screen-lg-m;
+        padding: common.$screen-lg-m;
+      }
+    }
+  }
+}

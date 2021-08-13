@@ -1,0 +1,72 @@
+﻿/*---------------- Page Footer ----------------*/
+
+#PageFooter { 
+    margin: 0px auto 30px auto; 
+	width: 70%;
+    max-width:1000px;
+    min-width:760px;
+    background-color:white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+#PageFooter a, #PageFooter a:visited, #PageFooter a:active{
+    text-decoration:none;
+    color:black;
+}
+
+#FooterWrapper {
+    padding: 30px;
+}
+
+/*----------------------- Links ----------------------*/
+#PageFooter .LinksSection span {
+    display:inline-block;
+    padding-bottom:30px;
+}
+
+#PageFooter .LinksSection .Separator{
+    padding:0px 5px;
+}
+
+
+#PageFooter .LinksSection > a:hover{
+    text-decoration:underline;
+}
+
+/*----------------------- Copyright ----------------------*/
+#PageFooter .CopyRight{
+    
+}
+
+@media screen and (max-width: 832px) {
+        
+    #PageFooter {
+        width: auto;
+        min-width: 300px;
+        margin: 0px 30px 20px 30px;
+    }
+
+    #FooterWrapper {
+        padding:20px;
+    }
+
+    #PageFooter .LinksSection span {
+        padding-bottom:20px;
+    }
+}
+
+@media screen and (max-width: 500px) {      
+    
+    #PageFooter {
+        width: 88%;
+        margin: 0px auto 15px auto;
+    }
+
+    #FooterWrapper {
+        padding:15px;
+    }
+}
+
+

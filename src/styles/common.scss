@@ -1,0 +1,24 @@
+$body-color: #ccc;
+$page-color: #eee;
+$primary-color-light: white;
+
+$screen-sm-m: 10px;
+$screen-md-m: 15px;
+$screen-lg-m: 25px;
+
+$screen-md-min: 500px;
+$screen-lg-min: 832px;
+
+$aside-width: 200px;
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}

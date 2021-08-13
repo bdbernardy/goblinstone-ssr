@@ -1,0 +1,1392 @@
+﻿/*******************************************************************************************
+                                            Body
+*******************************************************************************************/
+
+html{
+    overflow:hidden;
+    height:100%;
+}
+
+body {
+    background-color:#ccc;
+    hyphens: auto;
+    overflow-x:hidden;
+    height:100%;
+}
+
+#BodyWrapper {
+    min-height:calc(100% - 160px);
+    margin: 30px auto 0px auto; 
+	width: 70%;
+    max-width: 1000px;
+    min-width: 760px;
+    background-color:#eee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#ContentWrapper {
+    padding: 30px 30px 0px 30px;
+}
+
+@media screen and (max-width: 832px) {   
+    #BodyWrapper {
+        width: auto;
+        min-width: 300px;
+        margin: 30px 30px 0px 30px;
+    }
+
+    #ContentWrapper {
+        padding: 20px 20px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #BodyWrapper {
+        width: 88%;
+        margin: 0px auto 0px auto;
+    }
+
+    #ContentWrapper {
+        padding: 15px 15px 0px 15px;
+    }
+}
+
+/*******************************************************************************************
+                                    Two Column Layout
+*******************************************************************************************/
+
+.TwoColumnLayout {
+    height:auto; /*These two lines are required to avoid a bottom margin bug*/
+    overflow:hidden;      
+}
+
+.TwoColumnLayout .LeftColumn {
+    width: calc(50% - 15px);
+    float: left;
+    margin-right:30px;
+}
+
+.TwoColumnLayout .RightColumn {
+    width: calc(50% - 15px);
+    float: left;
+}
+
+@media screen and (max-width: 1086px) {
+
+    .TwoColumnLayout .LeftColumn, .TwoColumnLayout .RightColumn {
+        float: none;
+        width: 100%;
+        margin-right: 0px;    
+        min-width: 0px;     
+    }
+
+    .TwoColumnLayout .MobileBlock {
+        display:block;
+    }
+
+    .TwoColumnLayout .DesktopBlock {
+        display:none;
+    }
+}
+
+/*******************************************************************************************
+                            Menu and Body
+*******************************************************************************************/
+
+.SideMenuAndBody {
+    height:auto; /*These two lines are required to avoid a bottom margin bug*/
+    overflow:hidden;
+}
+
+.SideMenuAndBody .Sidebar {
+    display:block;
+    width: 240px;
+    margin-right: 30px;
+    float:left;    
+}
+
+.SideMenuAndBody .BodySection {
+    display: block;
+    width: calc(100% - 270px);
+    float: left;
+}
+
+@media screen and (max-width: 832px) {
+    .SideMenuAndBody .BodySection, .SideMenuAndBody .Sidebar {
+        display: block;
+        width: 100%;
+        margin-right: 0px;
+        float:none;
+    }
+
+    .SideMenuAndBody .MobileBlock {
+        display:initial;
+    }
+
+    .SideMenuAndBody .DesktopBlock {
+        display:none;
+    }
+}
+
+
+/*******************************************************************************************
+                            Sidebar and Body
+*******************************************************************************************/
+
+.SidebarAndBody {
+    height:auto; /*These two lines are required to avoid a bottom margin bug*/
+    overflow:hidden;
+}
+
+.SidebarAndBody .Sidebar {
+    display:block;
+    width:25%;
+    max-width:200px;
+    min-width:180px;
+    float:left;
+}
+
+.SidebarAndBody .BodySection {
+    display: block;
+    width: calc(75% - 30px);
+    max-width:calc(100% - 210px);
+    min-width:calc(100% - 230px);
+    float: left;
+    margin-right:30px;
+}
+
+@media screen and (max-width: 832px) {
+    
+    .SidebarAndBody .BodySection, .SidebarAndBody .Sidebar  {
+        display:block;
+        width: 100%;
+        min-width:100%;
+        max-width:100%;
+        float:none;
+        margin-right:0px;
+    }
+
+    .SidebarAndBody .MobileBlock {
+        display:block;
+    }
+
+    .SidebarAndBody .DesktopBlock {
+        display:none;
+    }
+}
+
+/*******************************************************************************************
+                                    Content Elements
+*******************************************************************************************/
+
+/* ---------------- Content ---------------- */
+.Content {
+    background-color:white;
+    border-bottom: 2px solid #ccc;
+    border-radius:5px;
+    padding: 30px 30px 0px 30px;
+    margin-bottom: 30px;  
+}
+
+.Content.BottomPadding{
+    padding-bottom:30px;
+}
+
+.Content .ContentHeader {
+    margin-bottom: 30px;
+}
+
+/* ---------------- Boxed Sidebars ---------------- */
+.BoxedSideBar {
+    background-color:white; 
+    border-radius:5px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ccc;    
+}
+
+.BoxedSideBar h1, .BoxedSideBar h2, .BoxedSideBar h3 {
+    border-bottom: 2px solid #CCCCCC;
+    color: #222222;
+    padding: 10px;
+}
+
+.BoxedSideBar .SidebarContent {
+    padding: 10px;
+}
+
+.BoxedSideBar .SidebarContent .SubscribeFooter input {
+    display:block;
+    padding: 8px;
+    width: calc(100% - 16px);
+    border: solid 1px  #DDDDDD;
+    margin-top:10px;
+}
+
+/* ---------------- Banners ---------------- */
+.BannerSidebar {
+    margin-bottom: 30px;
+    border-radius:5px;
+    position:relative;
+    border-bottom: 2px solid #ccc;
+    background-color: #555;  
+}
+
+.BannerSidebar:after {
+    padding-top: 375%;
+    display: block;
+    position:relative;
+    content:'';
+}
+
+.BannerSidebar a {
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:white;  
+    border-radius:5px;
+    z-index:2;
+}
+
+.BannerSidebar .TallBanner {
+    width:100%;
+    display:block;  
+    border-radius:5px;
+}
+
+.BannerSidebar .WideBanner {
+    width:100%;
+    display:none;   
+    border-radius:5px;
+}
+
+@media screen and (max-width: 832px)  {
+
+    /* ---------------- Sliders ---------------- */
+    .Slider {
+        margin-bottom: 20px;
+    }
+
+    .Slider .Wrapper {
+        /*height:417px;*/
+    }
+
+    /* ---------------- Content ---------------- */
+    .Content {
+        padding: 20px 20px 0px 20px;
+        margin-bottom: 20px;
+    }
+
+    .Content.BottomPadding{
+        padding-bottom:20px;
+    }
+
+    .Content .ContentHeader {
+        margin-bottom: 20px;
+    }
+
+    /* ---------------- BoxedSidebar ---------------- */
+    .BoxedSideBar {
+        margin-bottom:20px;
+        width:calc(50% - 10px);
+        float:left;
+    }
+
+    .BoxedSideBar.FirstSidebar {
+        margin-right:20px;
+    }
+
+    .BoxedSideBar.DesktopSidebar {
+        display:none;
+    }
+
+    /* ---------------- Banners ---------------- */
+    .BannerSidebar {
+        margin-bottom: 20px;
+    }
+
+    .BannerSidebar:after {
+        padding-top: 52.5%;
+    }
+
+    .BannerSidebar .TallBanner {
+        display:none;
+    }
+
+    .BannerSidebar .WideBanner{
+        display:block;
+        border-radius:0px;
+    }
+
+    .BannerSidebar {
+        padding:10px;
+    }
+
+    .BannerSidebar a {
+        width:calc(100% - 20px);
+        height:calc(100% - 20px);
+        border-radius:0px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    /* ---------------- Sliders ---------------- */
+    .Slider {
+        margin-bottom: 15px;
+    }
+
+    .Slider .Wrapper {
+        /*height:417px;*/
+    }
+
+    /* ---------------- Content ---------------- */
+    .Content {
+        padding: 15px 15px 15px 15px;
+        margin-bottom: 15px;
+    }
+
+    .Content.BottomPadding{
+        padding-bottom:15px;
+    }
+
+    .Content .ContentHeader {
+        margin-bottom: 15px;
+    }
+
+    /* ---------------- BoxedSidebar ---------------- */
+    .BoxedSideBar {
+        margin-bottom:15px;
+        width:100%;
+        float:none;
+    }
+
+    .BoxedSideBar.FirstSidebar {
+        margin-right:0px;
+    }
+
+     /* ---------------- Banners ---------------- */
+    .BannerSidebar {
+        margin-bottom: 15px;
+        padding:5px;
+    }
+
+    .BannerSidebar a {
+        width:calc(100% - 10px);
+        height:calc(100% - 10px);
+    }
+
+    /* ---------------- Slider ---------------- */
+    .Slider .Wrapper {
+        padding:5px;
+    }
+
+    .Slider .Wrapper .Slide {
+        width:calc(100% - 10px);
+        height:calc(100% - 10px);
+    }
+
+    .Slider .Wrapper .NextSlide {
+        right:5px;
+    }
+
+    .Slider .Wrapper .PreviousSlide {
+        left:5px;
+    }
+}
+
+/*******************************************************************************************
+                                    Product Page
+*******************************************************************************************/
+
+.ProductPage {
+    height:auto; /*These two lines are required to avoid a bottom margin bug*/
+    overflow:hidden;
+}
+
+.ProductPage .ProductPageWrapper{
+    border-radius:5px;
+    background-color:white;
+    padding:30px;
+    margin-bottom:30px;
+    border-bottom: 2px solid #ccc;
+}
+
+.ProductPage .SidebarBlock {
+    float: left;
+    max-width: 240px;
+    width: calc(40% - 15px);
+}
+
+.ProductPage .TitleBlock, .ProductPage .ShopBlock, .ProductPage .BodyBlock {
+    float:right;
+    min-width:calc(100% - 270px);
+    width: calc(60% - 15px);
+}
+
+/*--------------- Tile Block ---------------*/
+.ProductPage .TitleBlock .Subtitle {
+    background-color: #eee;
+    padding: 8px;
+    border-radius:3px;
+    margin-top: 10px;
+    font-weight: 500;
+    text-shadow: 1px 1px #fff;
+    font-weight:500;
+}
+
+/*--------------- Image Block ---------------*/
+.ProductPage .ImageBlock {
+    display:block;
+}
+
+.ProductPage .ImageBlock img {
+    display:block;
+    width: calc(100%  - 2px);
+    height: auto;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 10px #555;
+}
+
+.ProductPage .PreviewButton {
+    display:block;
+    margin-top:10px;
+    text-align:center;
+    cursor:pointer;
+    color:darkgray;
+}
+
+.ProductPage .PreviewButton:hover{
+    text-decoration:underline;
+}
+
+.ProductPage .DetailsBlock {
+    background-color: #eee;
+    padding: 8px;
+    border-radius:5px;
+    margin-top: 30px;
+}
+
+.ProductPage .DetailsBlock table {
+    width:100%;
+}
+
+.ProductPage .DetailsBlock td {
+    padding:2.5px;
+}
+
+.ProductPage .DetailsBlock td.LabelColumn {
+    vertical-align: top;
+    width: auto;
+    padding-right: 20px;
+    white-space: nowrap;
+    font-weight:bold;
+} 
+
+.ProductPage .DetailsBlock td.ValueColumn {
+    vertical-align: top;
+    text-align:left;
+    width:100%;
+}
+
+#btnToggleDetails {
+    display:none;
+    background:none;
+    border:none;
+    margin-top:15px;
+    cursor:pointer;
+    padding:8px;
+    background-color:#eee;
+    border-radius:5px;
+}
+
+#btnToggleDetails img {
+    height:22px;
+    vertical-align:middle;
+    display:inline-block;
+    margin-right:2px;
+}
+
+#btnToggleDetails span {
+    display:inline-block;
+    vertical-align:middle;
+}
+
+#btnToggleDetails.Toggled img {
+    transform: rotate(180deg);
+}
+
+
+/*--------------- Shop Block ---------------*/
+.ProductPage .PriceList .PricesTable {
+    margin-top: 15px;
+    display:block;
+    width: 370px;
+}
+
+.ProductPage .PriceList .PricesTable td {
+    padding-top: 5px;
+    width: 100%;
+}
+
+
+.ProductPage .PriceList .PricesTable td.PriceColumn {
+    width:auto;
+    text-align:right;
+    white-space:nowrap;
+}
+
+.ProductPage .PriceListButtons {
+    margin-top: 20px;
+    display: block;
+    width: 370px;
+}
+
+.ProductPage .PriceListButtons .PriceListButtonsWrapper{
+    text-align:center;
+}
+    
+.ProductPage .PriceListButtons .PriceListButtonsWrapper a{
+    display:inline-block;
+    width:240px;
+    max-width:calc(100% - 24px);
+}
+
+.PriceListButtonsWrapper a, .PriceListButtonsWrapper a:active, .PriceListButtonsWrapper a:visited {
+    color:black;
+    text-decoration:none;
+}
+
+.ProductPage .PriceListButtons .PriceListButtonsWrapper a:hover .PriceInstructions {
+    text-decoration:underline;
+}
+
+.ProductPage .PriceListButtons div {
+    text-align:center;
+}
+
+.ProductPage .PriceListButtons img {
+    display:inline-block;
+    max-width: 100%;
+    max-height:60px;
+}
+
+.ProductPage .PriceListButtons .PriceInstructions {
+    text-align:center;
+    font-size:77.5%;
+    margin-top:-5px;
+    color:darkgrey;
+}
+
+.PriceInstructions .MobilePart {
+    display:none;
+}
+
+/*--------------- Coming Soon ---------------*/
+
+.ProductPage .ComingSoon {
+    margin-top:10px;
+    margin-bottom:-15px;
+    text-align:center;
+    width:370px;
+    max-width:100%;
+}
+
+.ProductPage .ComingSoon img{
+    max-width:100%;
+    width:300px;
+}
+
+/*--------------- Body Block ---------------*/
+.ProductPage .BodyBlock {
+    margin-top: 25px;
+}
+
+.ProductPage .ShareBlock {
+    margin-top:25px;
+}
+
+.ProductPage .ShareBlock h3 {
+    width: 46px;
+    padding-top:9px;
+    display:block;
+    float:left;
+}
+
+.ProductPage .ShareBlock a {
+    cursor:pointer;
+}
+
+.ProductPage .ShareBlock img {
+    margin: 0px 0px 0px 13px;
+    display:block;
+    float:left;
+    cursor: pointer;
+    height: 36px;
+    width: auto;
+}
+
+.ProductPage .TagBlock {
+    margin-top:13px;
+}
+
+.ProductPage .TagBlock .TagContainer {
+    float:right;
+    width:calc(100% - 50px);
+}
+
+
+.ProductPage .TagBlock h3 {
+    width: 50px;
+    margin-top:12px;
+    padding-top:6px;
+    display:block;
+    float:left;
+}
+
+.ProductPage .TagBlock .Button {
+    margin: 12px 0px 0px 8px;
+    display:block;
+    float:left;
+    background-color: #a3a3a3;
+    color:white;
+    border-radius:0px;
+}
+
+.ProductPage .TagBlock .Button:hover {
+    background-color:#999999;
+ }
+
+@media screen and (max-width: 832px) {
+
+    .ProductPage .ProductPageWrapper{
+        padding:20px;
+        margin-bottom:20px;
+    }
+
+    .ProductPage .SidebarBlock {
+        float: left;
+        max-width: 240px;
+        width: calc(40% - 10px); 
+    }
+
+    .ProductPage .TitleBlock, .ProductPage .ShopBlock, .ProductPage .BodyBlock
+    {
+        float: right;
+        min-width: calc(100% - 260px);
+        width: calc(60% - 10px);
+    }
+
+   
+    .ProductPage .PriceList .PricesTable, .ProductPage .PriceListButtons {
+        width: 100%;
+    }
+
+    .ProductPage .DesktopBlock {
+        display:none;
+    }
+
+    .PriceInstructions .MobilePart {
+        display:inline;
+    }
+
+    .PriceInstructions .DesktopPart {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .ProductPage .BodySeparator {
+        clear:both;
+    }
+
+    .ProductPage .BodyBlock, .ProductPage .TitleBlock
+      {
+        width:100%;
+        float:none;
+        min-width:100%;
+        max-width:100%;
+    }
+
+    .ProductPage .BodyBlock {
+        margin-top:20px;
+    }
+
+    .ProductPage .SidebarBlock {
+        min-width: 160px;
+        margin-top: 20px;
+    }
+
+    .ProductPage .ShopBlock {
+        max-width: calc(100% - 180px);
+    }
+
+    .ProductPage .DetailsBlock {
+        margin-top: 10px;
+        display:none;
+    }
+
+    #btnToggleDetails {
+        display:block;
+    }
+
+    .ProductPage .DetailsBlock.MobileBlock {
+        display:none;
+    }
+
+    .ProductPage .DetailsBlock.MobileBlock.Toggled {
+        display:block;
+    }
+
+    .ProductPage .PriceListButtons {
+        margin-top:30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .ProductPage .ShopBlock {
+        width: 100%;
+        float: none;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 10px 0px;
+        border-top: 1px solid #DDDDDD;
+        border-bottom:1px solid #DDDDDD;
+        margin-top: 20px;
+    }
+
+    .ProductPage .SidebarBlock {
+        width: 240px;
+        float:none;
+        margin-top:15px;
+    }
+
+    .ProductPage .PriceList .PricesTable  {
+        margin-top: 0px;
+    }
+
+    .ProductPage .ProductPageWrapper{
+        padding:15px;
+        margin-bottom:15px;
+    }
+
+    .ProductPage a[data-lightbox] {
+        pointer-events: none;
+    }
+
+    .ProductPage .PriceListButtons {
+        margin-top:15px;
+    }
+}
+
+/*******************************************************************************************
+                                    Freebie Page
+*******************************************************************************************/
+
+.FreebiePage {
+    height:auto; /*These two lines are required to avoid a bottom margin bug*/
+    overflow:hidden;
+}
+
+.FreebiePage .FreebiePageWrapper{
+    border-radius:5px;
+    background-color:white;
+    padding:30px;
+    margin-bottom:30px;
+    border-bottom: 2px solid #ccc;
+}
+
+.FreebiePage .SidebarBlock {
+    float: left;
+    max-width: 240px;
+    width: calc(40% - 15px);
+}
+
+.FreebiePage .TitleBlock, .FreebiePage .ShopBlock, .FreebiePage .DescriptionBlock, .FreebiePage .TagBlock, .FreebiePage .ShareBlock {
+    float:right;
+    min-width:calc(100% - 270px);
+    width: calc(60% - 15px);
+}
+
+/*--------------- Tile Block ---------------*/
+.FreebiePage .TitleBlock .Subtitle {
+    background-color: #eee;
+    padding: 8px;  
+    border-radius:3px;
+    margin-top: 10px;
+    font-weight: 500;
+    text-shadow: 1px 1px #fff;
+    font-weight:500;
+}
+
+/*--------------- Image Block ---------------*/
+.FreebiePage .ImageBlock {
+    display:block;
+}
+
+.FreebiePage .ImageBlock img {
+    display:block;
+    width: calc(100%  - 2px);
+    height: auto;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 10px #555;
+}
+
+.FreebiePage .PreviewButton {
+    display:block;
+    margin-top:10px;
+    text-align:center;
+    cursor:pointer;
+    color:darkgray;
+}
+
+.FreebiePage .PreviewButton:hover{
+    text-decoration:underline;
+}
+
+/*--------------- Body Block ---------------*/
+.FreebiePage .DescriptionBlock {
+    margin-top: 25px;
+}
+
+.FreebiePage .ShopBlock {
+    margin-top: 20px;
+    padding: 10px 0px;
+}
+
+.FreebiePage .ShopBlock .LoginBlock, .FreebiePage .ShopBlock .DirectDownloadBlock {
+    font-size:110%;
+    font-weight:bold;
+}
+    
+.FreebiePage .ShopBlock .LoginBlock a {
+    margin-right: 2px;
+    margin-top:0px;
+    font-weight:bold;
+}
+
+.FreebiePage .ShopBlock .DirectDownloadBlock a {
+    margin-top:0px;
+    padding:15px 20px;
+    font-weight:bold;
+}
+
+.FreebiePage .ShopBlock .DriveThruRPGBlock {
+    display:inline-block;
+    text-align:center;
+}
+
+.FreebiePage .ShopBlock .DriveThruRPGBlock img {
+    width:190px;
+    margin-left:55px;
+    margin-top:10px;
+}
+
+.FreebiePage .ShareBlock {
+    margin-top:25px;
+}
+
+.FreebiePage .ShareBlock h3 {
+    width: 46px;
+    padding-top:9px;
+    display:block;
+    float:left;
+}
+
+.FreebiePage .ShareBlock a {
+    cursor:pointer;
+}
+
+.FreebiePage .ShareBlock img {
+    margin: 0px 0px 0px 13px;
+    display:block;
+    float:left;
+    cursor: pointer;
+    height: 36px;
+    width: auto;
+}
+
+.FreebiePage .TagBlock {
+    margin-top:13px;
+}
+
+.FreebiePage .TagBlock .TagContainer {
+    float:right;
+    width:calc(100% - 50px);
+}
+
+
+.FreebiePage .TagBlock h3 {
+    width: 50px;
+    margin-top:12px;
+    padding-top:6px;
+    display:block;
+    float:left;
+}
+
+.FreebiePage .TagBlock .Button {
+    margin: 12px 0px 0px 8px;
+    display:block;
+    float:left;
+    background-color: #a3a3a3;
+    color:white;
+    border-radius:0px;
+}
+
+.FreebiePage .TagBlock .Button:hover {
+    background-color:#999999;
+ }
+
+@media screen and (max-width: 832px) {
+
+    .FreebiePage .FreebiePageWrapper{
+        padding:20px;
+        margin-bottom:20px;
+    }
+
+    .FreebiePage .SidebarBlock {
+        float: left;
+        max-width: 240px;
+        width: calc(40% - 10px); 
+    }
+
+    .FreebiePage .TitleBlock, .FreebiePage .ShopBlock, .FreebiePage .DescriptionBlock, .FreebiePage .TagBlock, .FreebiePage .ShareBlock {
+        float: right;
+        min-width: calc(100% - 260px);
+        width: calc(60% - 10px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .FreebiePage .TagsSeparator {
+        clear:both;
+    }
+
+    .FreebiePage .SidebarBlock {
+        width: 240px;
+        float:none;
+        margin-top:15px;
+    }
+
+    .FreebiePage .DescriptionBlock, .FreebiePage .ShopBlock, .FreebiePage .TitleBlock, .FreebiePage .TagBlock, .FreebiePage .ShareBlock {
+        width:100%;
+        float:none;
+        min-width:100%;
+        max-width:100%;
+    }
+
+    .FreebiePage .FreebiePageWrapper{
+        padding:15px;
+        margin-bottom:15px;
+    }
+
+    .FreebiePage a[data-lightbox] {
+        pointer-events: none;
+    }
+}
+
+
+/*******************************************************************************************
+                                    Blog Post Page
+*******************************************************************************************/
+
+.BlogPostPage .Content {
+    padding-bottom:30px;
+}
+
+/*--------------- Tile Block ---------------*/
+.BlogPostPage .TitleBlock {
+    margin-bottom:15px;
+}
+
+.BlogPostPage .TitleBlock .Subtitle {
+    background-color: #eee;
+    padding: 8px; 
+    border-radius:3px;
+    margin-top: 10px;
+    font-weight: 500;
+    text-shadow: 1px 1px #fff;
+    font-weight:500;
+}
+
+/*--------------- Images ---------------*/
+.BlogPostPage .BlogPostBody .FloatLeft {
+    float:left;
+    margin-right:20px;
+    margin-bottom:10px;
+}
+
+.BlogPostPage .BlogPostBody .FloatRight {
+    float:right;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+
+.BlogPostPage .BlogPostBody .ImageTitle{
+    text-align:center;
+    margin-top:5px;
+    font-size:100%;
+    font-weight:bold;
+}
+
+.BlogPostPage .BlogPostBody .ImageSubtitle{
+    text-align:center;
+    font-size:80%;
+}
+
+.BlogPostPage .BlogPostBody .TallImage {
+    display:block;
+    width: 40%;
+    max-width:240px;
+    min-width:180px;
+}
+
+.BlogPostPage .BlogPostBody img.TallImage, .BlogPostPage .BlogPostBody .TallImage img  {
+    max-width:100%;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 10px #555;
+}
+
+.BlogPostPage .BlogPostBody img.TallImage.NoFrame, .BlogPostPage .BlogPostBody .TallImage.NoFrame img  {
+    max-width:100%;
+    border: none;
+    box-shadow: none;
+}
+
+.BlogPostPage .BlogPostBody .WideImage {
+    display:block;
+    width: 60%;
+    max-width:640px;
+    min-width:180px;
+}
+
+.BlogPostPage .BlogPostBody img.WideImage, .BlogPostPage .BlogPostBody .WideImage img  {
+    max-width:100%;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 10px #555;
+}
+
+.BlogPostPage .BlogPostBody img.WideImage.NoFrame, .BlogPostPage .BlogPostBody .WideImage.NoFrame img  {
+    max-width:100%;
+    border: none;
+    box-shadow: none;
+}
+
+.BlogPostPage .BlogPostBody .FullWidthImage {
+    display:block;
+    width: 100%;
+    max-width:100%;
+    margin-bottom:10px;
+    max-width:100%;
+    box-shadow: 2px 2px 10px #555;
+}
+
+.BlogPostPage .BlogPostBody .FullWidthImage.NoFrame {
+    display:block;
+    width: 100%;
+    max-width:100%;
+    margin-bottom:10px;
+    max-width:100%;
+    box-shadow: none;
+}
+
+/*--------------- Body Block ---------------*/
+
+
+.BlogPostPage .SupportOnPatreon {
+    margin-top:25px;
+}
+
+.BlogPostPage .SupportOnPatreon img {
+    display:block;
+    width:100%;
+}
+
+.BlogPostPage .ShareBlock {
+    margin-top:25px;
+}
+
+.BlogPostPage .ShareBlock h3 {
+    width: 46px;
+    padding-top:9px;
+    display:block;
+    float:left;
+}
+
+.BlogPostPage .ShareBlock a {
+    cursor:pointer;
+}
+
+.BlogPostPage .ShareBlock img {
+    margin: 0px 0px 0px 13px;
+    display:block;
+    float:left;
+    cursor: pointer;
+    height: 36px;
+    width: auto;
+}
+
+.BlogPostPage .TagBlock {
+    margin-top:13px;
+}
+
+.BlogPostPage .TagBlock .TagContainer {
+    float:right;
+    width:calc(100% - 50px);
+}
+
+.BlogPostPage .TagBlock h3 {
+    width: 50px;
+    margin-top:12px;
+    padding-top:6px;
+    display:block;
+    float:left;
+}
+
+.BlogPostPage .TagBlock .Button {
+    margin: 12px 0px 0px 8px;
+    display:block;
+    float:left;
+    background-color: #a3a3a3;
+    color:white;
+    border-radius:0px;
+}
+
+.BlogPostPage .TagBlock .Button:hover {
+    background-color:#999999;
+ }
+
+@media screen and (max-width: 832px) {
+
+    .BlogPostPage .Content{
+        padding-bottom:20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .BlogPostPage .Content{
+        padding-bottom:15px;
+    }
+
+    .BlogPostPage .BlogPostBody .FloatLeft {
+        float:none;
+        margin-right:0px;
+    }
+
+    .BlogPostPage .BlogPostBody .FloatRight {
+        float:none;
+        margin-left:0px;
+    }
+
+    .BlogPostPage .BlogPostBody .TallImage {
+        width: 100%;
+        max-width:280px;
+    }
+
+    .BlogPostPage .BlogPostBody .WideImage {
+        width: 100%;
+        max-width:100%;
+    }
+}
+
+/*******************************************************************************************
+    Subscribe Section (Full Page Block/Put Under a ProductPage, FreebiePage, or NewsPage
+*******************************************************************************************/
+
+/* Subscribe Block */
+.SubscribeSection {
+    height:auto; /*These two lines are required to avoid a bottom margin bug*/
+    overflow:hidden;
+}
+
+.SubscribeSection .ErrorMessageBox{
+    margin-bottom:10px;
+}
+
+.SubscribeSection .SubscribeSectionWrapper {
+    border-radius:5px;
+    background-color:white;
+    padding:30px;
+    margin-bottom:30px;
+    border-bottom: 2px solid #ccc;
+}
+
+.SubscribeSection {
+    background-color: #a3a3a3; 
+    border-radius:3px;
+    vertical-align: middle;
+    margin-top: 10px;
+    padding: 6px;
+}
+
+.SubscribeSection .SubscribeFooter input{
+    display:inline-block;
+    padding: 8px;
+    width: calc(100% - 107px);
+    border: solid 1px  #DDDDDD;
+}
+
+.SubscribeSection .SubscribeFooter .Button {
+    display:inline-block;
+    margin: 0px 0px 0px 6px;
+}
+
+.SubscribeSection .SubscribeFooter .Button.Progress .TextPart {
+    padding: 10px;
+}
+
+.SubscribeSection .SubscribeFooter .Button.Progress .ProgressPart img {
+    height:24px;
+    margin-top:6px;
+}
+
+
+
+@media screen and (max-width: 832px) {
+
+    .SubscribeSection .SubscribeSectionWrapper {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .SubscribeSection .SubscribeSectionWrapper {
+        padding:15px;
+        margin-bottom:15px;
+    }
+}
+
+
+/*******************************************************************************************
+    Comments Section (Full Page Block/Put Under a ProductPage, FreebiePage, or NewsPage
+*******************************************************************************************/
+
+.CommentsSection {
+    height:auto; /*These two lines are required to avoid a bottom margin bug*/
+    overflow:hidden;
+}
+
+.CommentsSection .CommentsSectionWrapper {
+    border-radius:5px;
+    background-color:white;
+    padding:30px;
+    margin-bottom:30px;
+    border-bottom: 2px solid #ccc;
+}
+
+
+/*--------------- Login Block ---------------*/
+
+.CommentsSection .LoginBlock {
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.CommentsSection .LoginBlock span {
+    display:inline-block;
+    padding: 8px 4px;
+}
+
+.CommentsSection .LoginBlock .Button {
+    display:inline-block;
+    margin:0px;
+}
+
+
+/*--------------- Comments ---------------*/
+
+.CommentsSection .CommentItem {
+    margin-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #DDDDDD;
+}
+
+.CommentsSection .CommentItem.Indented {
+    margin-left: 84px;
+}
+
+.CommentsSection .CommentItem .CommentBody, .CommentsSection .CommentItem .CommentHeader{
+    float:right;
+    width:calc(100% - 84px);
+}
+
+.CommentsSection .CommentItem .UserImage{
+    float:left;
+    width:64px;
+    display:block;
+}
+
+.CommentsSection .CommentItem .CommentDate {
+    color:darkgrey;
+}
+
+.CommentsSection .CommentItem .CommentText {
+    margin-top:10px;
+}
+
+.CommentsSection .CommentItem .ButtonWrapper {
+    display:inline-block;
+    margin-right:4px;
+}
+
+.CommentsSection .CommentItem .ButtonWrapper button {
+    width:60px;
+}
+
+/*--------------- New Comment Block ---------------*/
+.CommentsSection .NewCommentBlock {
+    margin-top: 20px;
+}
+
+.CommentsSection .NewCommentBlock textarea {
+    display: block;
+    padding: 8px;
+    border: solid 1px  #DDDDDD;
+    width: calc(100% - 16px);
+    margin-top:10px;
+}
+
+.CommentsSection .NewCommentBlock button {
+    margin-top:10px;
+}
+
+@media screen and (max-width: 832px) {
+
+    .CommentsSection .CommentsSectionWrapper {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .CommentsSection .CommentsSectionWrapper {
+        padding:15px;
+        margin-bottom:15px;
+    }
+
+    .CommentsSection .CommentItem .CommentHeader{
+        width:calc(100% - 63px);
+    }
+
+    .CommentsSection .CommentItem .CommentBody{
+        width:100%;
+        float:none;
+        clear:both;
+        padding-top:10px;
+    }
+
+    .CommentsSection .CommentItem .UserImage{
+        width:48px;
+        display:block;
+    }
+
+    .CommentsSection .CommentItem.Indented {
+        margin-left: 40px;
+    }
+}

@@ -1,0 +1,9 @@
+@use 'Source/styles/common.scss';
+
+.subscribe-form {
+  input {
+    padding: 8px;
+    width: calc(100% - 16px);
+    border: solid 1px  #DDDDDD;      
+  }
+}

@@ -1,0 +1,68 @@
+@mixin slide-button {
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  height: 66px;
+  top: calc(50% - 33px);
+  opacity: 0.5;
+  z-index: 10;
+
+  svg {
+    height: 66px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.slider {
+  background-color: #555;
+  border-bottom: 2px solid #ccc;  
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  .wrapper {
+    padding: 10px;
+    position:relative;
+
+    &:after {
+      padding-top: 52.5%;
+      display: block;
+      position: relative;
+      content: '';
+    }
+  }
+  
+  .next-slide {
+    @include slide-button;
+    right: 10px;
+  }
+  
+  .previous-slide {
+    @include slide-button;
+    left: 10px;
+  }
+
+  .slide {
+    display: block;
+    position: absolute;
+    transition: opacity 500ms ease-in;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: white;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+  
+    &.displayed{
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+}

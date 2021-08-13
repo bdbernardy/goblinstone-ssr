@@ -1,0 +1,526 @@
+﻿/**************************************************
+        
+                Product Tiles
+    
+**************************************************/
+
+.ProductContainer {
+    margin-left:-5%;
+    width:105%;
+    text-align:left;
+}
+
+.ProductContainer .ProductTile {
+    width: 28%;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-left: 4.7%;
+    vertical-align:middle;
+}
+
+.ProductContainer .ProductBanner {
+    display: block;
+    position: absolute;
+    height: 75px;
+    width:auto;
+    right:6px;
+    top:1px;
+}
+
+.ProductContainer .ProductTile .RelativePosition:after {
+    padding-top: 130%;
+    display: block;
+    position:relative;
+    content:'';
+    background-color:#eee;
+}
+
+.ProductContainer .ProductTile .ArtGallery.RelativePosition:after {
+    padding-top:calc(130% + 15px);
+}
+
+.ProductContainer .ProductTile .ArtGallery.RelativePosition .ArtTableWrapper {
+    position:absolute;
+    z-index:2;
+    height:100%;
+    width:100%;
+    background-color:white;
+}
+
+.ProductContainer .ProductTile .ArtGallery.RelativePosition .ArtTableWrapper table {
+    width:100%;
+    height:100%;
+}
+
+.ProductContainer .ProductTile .RelativePosition > div > .EntityImage {
+    position:absolute;
+    z-index:2;
+}
+
+.ProductContainer .EntityImage {
+    width: calc(100%  - 2px);
+    height: auto;
+    border: 1px solid #444;
+    box-shadow: 2px 2px 10px #555;
+    display:block;
+}
+
+.ProductContainer .FirstPriceTag {
+    display:block;
+    position:absolute;
+    height:53px;
+    width:auto;
+    bottom:5px;
+    left:3px;
+    z-index:50;
+}
+
+.ProductContainer .FirstPrice {
+    display:block;
+    position:absolute;
+    bottom:5px;
+    left:3px;
+    height:53px;
+    width:53px;
+    z-index:50;
+}
+
+.ProductContainer .SecondPriceTag {
+    position:absolute;
+    height:53px;
+    width:auto;
+    bottom:5px;
+    left:58px;
+    z-index:2;
+}
+
+.ProductContainer .SecondPrice {
+    display:block;
+    position:absolute;
+    bottom:5px;
+    left:58px;
+    height:53px;
+    width:53px;
+    z-index:3;
+}
+
+.ProductContainer .SecondPrice .LineOne, .ProductContainer .FirstPrice .LineOne {
+    color:white;
+    text-align:center;
+    font-size: 84.5%;
+    margin-top:13px;
+}
+
+.ProductContainer .SecondPrice .LineTwo, .ProductContainer .FirstPrice .LineTwo {
+    color:black;
+    text-align:center;
+    font-size: 81.5%;
+}
+
+.ProductContainer .SecondPrice .SingleLine, .ProductContainer .FirstPrice .SingleLine {
+    color:white;
+    text-align:center;
+    font-size: 93%;
+    margin-top:17px;
+}
+
+.ProductContainer .ProductFooter{
+    padding-top: 5px;
+    text-align: center;
+    color: dimgrey;
+    vertical-align: top;
+}
+
+.ProductContainer a,.ProductContainer a:visited,.ProductContainer a:active{
+    color:black;
+    text-decoration:none;
+}
+
+.ProductContainer a:hover .ProductFooter{
+    text-decoration:underline;
+}
+
+.ProductContainer .NoRecordsBox{
+    margin-left:25px;
+}
+
+/*Swiching to a 2-column view in small laptops*/
+@media screen and (max-width: 1300px) {
+    .ProductContainer {
+        margin-left:-5%;
+        width:105%;
+    }
+
+    .ProductContainer .ProductTile {
+        width: 44%;
+        margin-left: 5.5%;
+    }
+}
+
+/*Swiching back to a 3-column view for large tablets*/
+@media screen and (max-width: 832px) {
+    .ProductContainer {
+        margin-left:-3%;
+        width: 103%;
+    }
+
+    .ProductContainer .ProductTile {
+        width: 29.5%;
+        margin-left: 3.2%
+    }
+}
+
+/*Swiching to a 2-column view in medium mobile devices*/
+@media screen and (max-width: 650px) {
+    .ProductContainer {
+        margin-left:-3%;
+        width:103%;
+    }
+
+    .ProductContainer .ProductTile {
+        width: 46%;
+        margin-left: 3.5%;
+    }
+}
+
+/*Swiching to a 1-column view for small tablets*/
+@media screen and (max-width: 500px) {
+
+    .ProductContainer {
+        margin:0px;
+        width:100%;
+        text-align:center;
+    }
+
+    .ProductContainer .ProductTile {
+        margin: 12.5px auto 12.5px auto;
+        width:auto;
+        float: none;
+        height:auto;
+        display:inline-block;
+    }
+
+    .ProductContainer .ProductTile .RelativePosition:after {
+        padding-top: inherit;
+        position:inherit;
+    }
+
+    .ProductContainer .ProductTile .ArtGallery.RelativePosition:after {
+        padding-top:inherit;
+        position:inherit;
+    }
+
+    .ProductContainer .ProductTile .ArtGallery.RelativePosition .ArtTableWrapper {
+        position:inherit;
+        z-index:2;
+        height:auto;
+        width:auto;
+        background-color:white;
+    }
+
+    .ProductContainer .ProductTile .RelativePosition > div > .EntityImage {
+        position:inherit;
+        z-index:2;
+    }
+
+    .ProductContainer .EntityImage {
+        width: calc(100%  - 2px);
+        height: auto;
+        border: 1px solid #444;
+        box-shadow: 2px 2px 10px #555;
+        vertical-align:middle;
+        max-width:240px;
+        margin: 0px auto;
+    }
+}   
+
+/*************************************************
+
+                Entity List
+
+*************************************************/
+
+.EntityListContainer h3{
+    font-weight:600;
+}
+
+.EntityListContainer .EntityListItem {
+    border-bottom:1px solid #DDDDDD;
+    padding-bottom:20px;
+    margin-bottom:30px;
+}
+
+.EntityListContainer .EntityTitle{
+    display:block;
+}
+
+.EntityListContainer .EntitySubTitle {
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 3px;
+    margin-top: 5px;
+    font-weight: 500;
+    text-shadow: 1px 1px #fff;
+    margin-top: 10px;
+}
+
+.EntityListContainer .EntityBody {
+    margin-top: 10px;
+}
+
+.EntityListContainer .EntityBodyContainer {
+    max-height: 350px;
+    overflow: hidden;
+}
+
+
+
+
+.EntityListContainer .EntityTitle, .EntityListContainer .EntityTitle:visited, .EntityListContainer .EntityTitle:active{
+    text-decoration:none;
+    color:black;
+}
+
+
+.EntityListContainer .EntityImageBlock {
+    display:block;
+    float:left;
+    width: 240px;
+    height: auto;
+    margin: 0px 15px 5px 0px;
+}
+
+.EntityListContainer .EntityImage {
+    max-width: calc(100% - 14px);
+    padding:0px;
+    margin:0px;
+    border: 1px solid #CCCCCC;
+    padding: 6px;
+}
+
+.EntityListContainer .GradientTransition{
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+} 
+
+.EntityListContainer .TagBlock {
+    margin-top:13px;
+}
+
+.EntityListContainer .TagBlock .TagContainer {
+    float:right;
+    width:calc(100% - 50px);
+}
+
+.EntityListContainer .TagBlock h3 {
+    width: 50px;
+    margin-top:12px;
+    padding-top:6px;
+    display:block;
+    float:left;
+}
+
+.EntityListContainer .TagBlock .Button {
+    margin: 12px 0px 0px 8px;
+    display:block;
+    float:left;
+    background-color: #a3a3a3;
+    color:white;
+    border-radius:0px;
+}
+
+.EntityListContainer .TagBlock .Button:hover {
+    background-color:#999999;
+ }
+
+@media screen and (max-width: 550px) {
+       
+    .EntityListContainer .EntityImageBlock {
+        float:none;
+        width: 280px;
+        max-width:100%;
+        height: auto;
+    }
+}
+
+
+/**************************************************
+        
+                Product Version List
+    
+**************************************************/
+
+.ProductVersionList .ProductVersion .ProductVersionContainer {
+    margin-top:5px;
+    padding: 8px 0px 8px 10px;
+    max-width:335px;
+    cursor:pointer;
+}
+
+.ProductVersionList .ProductVersion .ProductVersionContainer .LoginRequired {
+    color:dimgrey;
+    margin-left:21px;
+}
+
+.ProductVersionList .ProductVersion.Selected .ProductVersionContainer {
+    padding: 7px 0px 7px 9px; 
+    border: 1px solid black;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    background-color:pink;
+    background-image: linear-gradient(to bottom, pink, #B7BAA7);
+}
+
+.ProductVersionList .ProductVersion input {
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.ProductVersionList .ProductVersion .ProductVersionLabel {
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:5px;
+    max-width:220px;
+    width:calc(100% - 115px);
+}
+
+.ProductVersionList .ProductVersion .ProductVersionPrice {
+    display:inline-block;
+    vertical-align:middle;
+    width:75px;
+    text-align:right;
+    font-weight:bold;
+	padding-right:10px;
+}
+
+.ProductVersionList {
+    position:relative;
+}
+
+.ProductVersionList .ProductVersionButton {
+    margin:0px;
+    position:absolute;
+    display:none;
+    width:75px;
+    text-align:center;
+}
+
+.ProductVersionList .ProductVersionButton.TopButton {
+    top:0px;
+    right:0px;
+}
+
+.ProductVersionList .ProductVersionButton.BottomButton {
+    bottom:0px;
+    left:0px;
+}
+
+.ProductVersionList .Selected .ProductVersionButton.TopButton {
+    display:block;
+}
+
+
+.ProductVersionList .DriveThruRPG.ProductVersionButton {
+    width:140px;
+}
+
+.ProductVersionList .DriveThruRPG.ProductVersionButton img {
+    width:140px;
+    height:auto;
+}
+
+
+@media screen and (max-width: 800px) {
+    /*Product Versions*/
+    .ProductVersionList {
+        position:relative;
+        padding-bottom:65px;
+    }
+
+    .ProductVersionList .Selected .ProductVersionButton.BottomButton {
+        display:block;
+    }
+
+    .ProductVersionList .Selected .ProductVersionButton.TopButton {
+        display:none;
+    }
+}
+
+/**************************************************
+        
+                Checkbox List
+    
+**************************************************/
+
+.CheckBoxList {
+    max-width:400px;
+}
+
+.CheckBoxList .CheckBoxListItem{
+    width:175px;
+    overflow:hidden;
+    display:inline-block;
+}
+
+.CheckBoxList span.CheckBox {
+    margin:0px;
+    padding: 3px 5px 1px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.CheckBoxList .CheckboxLabel{
+    margin:0px;
+    padding: 2px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/**************************************************
+        
+                Administration List
+    
+**************************************************/
+
+.AdminList{
+    margin-top:15px;
+}
+
+.AdminList a,.AdminList a:visited,.AdminList a:active{
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:110%;
+}
+
+.AdminList a:hover{
+    text-decoration:underline;
+
+}
+
+.AdminList .AdminListItem {
+    display:block;
+    padding: 5px;
+}
+
+.AdminList .AdminListAlternatingItem {
+    display:block;
+    background-color:#eee;
+    padding: 5px;
+}
+
+/**************************************************
+        
+                Fellowship List
+    
+**************************************************/
+
+.FellowshipContainer .FellowshipItem {
+    padding:20px 0px;
+    display:inline-block;
+    text-align:center;
+    margin:0px 20px;
+}

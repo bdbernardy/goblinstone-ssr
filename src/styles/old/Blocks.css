@@ -1,0 +1,245 @@
+﻿/* ---------------- Visibility ---------------- */
+
+.MobileBlock {
+    display:none;
+}
+
+.DesktopBlock {
+    display:block;
+}
+
+.Hidden {
+    display:none;
+}
+
+/*----------------------- Framed Boxes ----------------------*/
+
+.BottomBorderBox{
+    border-bottom: 1px solid black;
+}
+
+.NoRecordsBox{
+    padding: 10px;
+    margin-bottom:30px;
+    font-weight:bold;
+    font-size:110%;
+    background-color:#eee;
+    text-align:center;
+    border-radius:5px;
+}
+
+/* ---------------- Product Block ---------------- */
+
+/*
+    <a class="ProductBlock">
+        <img class="ComingSoon" runat="server" visible='<%# Eval("ComingSoon") %>'  src="/Images/ComingSoon.png" />
+        <img class="EntityImage" src='<%# Eval("SmallImageURL") %>'  />
+        <div class="Footer MediumTopMargin">
+            <%# Eval("EntityTitle") %>
+        </div>
+    </a>
+*/
+
+.ProductBlock {
+    width: 220px;
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+    position:relative;
+}
+
+.ProductBlock .ComingSoon{
+    position:absolute;
+    height:100px;
+    width:auto;
+    display:block;
+    position:absolute;
+    top: 1px;
+    right: 3.5px;     
+}
+
+.ProductBlock .EntityImage {
+    display:block;
+    width:100%;
+    height:auto;
+    max-width: 213px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    box-shadow: 5px 5px 2.5px #DDDDDD;
+}
+
+.ProductBlock .Footer{
+    text-align:center;
+    color:dimgrey;
+}
+
+a.ProductBlock, a.ProductBlock:visited,a.ProductBlock:active{
+    color:black;
+    text-decoration:none;
+}
+
+a.ProductBlock:hover .Footer{
+    text-decoration:underline;
+}
+
+
+
+/******************************************
+
+            File Upload Block
+
+*****************************************/
+
+.FileUpload{
+    position:relative;
+    cursor:pointer;
+}
+
+.FileUpload span{
+    overflow-x:hidden;
+    display:block;
+    max-height:120%;
+}
+
+.FileUpload input{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    opacity:0;
+    z-index:2;
+    cursor:pointer; 
+}
+
+.FileUpload button{
+    position:absolute;
+    width: 25px;
+    height: 100%;
+    top:0px;
+    right:0px;
+    z-index:1;
+    cursor:pointer;
+    border-left:solid 1px  #DDDDDD;
+}
+
+/******************************************
+
+            Detail Tables
+
+*****************************************/
+
+.DetailTable tr {
+    padding: 1.5px 0px;
+}
+
+.DetailTable td {
+    padding-right: 15px;
+}
+
+/******************************************
+
+            Price Buttons
+
+*****************************************/
+
+.PriceTagContainer {
+    
+}
+
+.PriceTagContainer .Button {
+    float:right;
+    text-align:center;
+}
+
+.PriceTagContainer .Button.FirstTag {
+    margin-left:20px;
+}
+
+.PriceTagContainer .PriceTag {
+    margin-top:3px;
+}
+
+
+/******************************************
+
+            Tag Administration
+
+*****************************************/
+
+.TagsAdministrationTable {
+    width:50%;
+}
+
+.TagsAdministrationTable th{
+    padding: 4px 8px;
+}
+
+.TagsAdministrationTable .FirstColumn {
+    width:68px;
+    padding-right:6px;
+}
+
+.TagsAdministrationTable .SecondColumn{
+    width:auto;
+    padding-right:6px;
+    text-align:left;
+}
+
+.TagsAdministrationTable .SecondColumn span {
+    padding: 4px 8px;
+    display:block;
+}
+
+.TagsAdministrationTable .SecondColumn input {
+    padding: 3.5px 7px;
+    vertical-align: middle;
+    border: solid 1px  #DDDDDD;
+    width:calc(100% - 14px);
+    font-family:Cambria;
+    display:block;
+    font-size: 100%;
+}
+
+
+.TagsAdministrationTable .ThirdColumn {
+    width:100px;
+    padding-right:6px;
+    text-align:center;
+}
+
+
+.TagsAdministrationTable .ThirdColumn span {
+    padding: 4.5px 8px;
+    display:block;
+    vertical-align:middle;
+}
+
+.TagsAdministrationTable .ThirdColumn input {
+    padding: 3.5px 7px;
+    vertical-align: middle;
+    border: solid 1px  #DDDDDD;
+    width:calc(100% - 14px);
+    font-family:Cambria;
+    text-align:center;
+    font-size: 100%; /* Base font size: 14px */
+    vertical-align:middle;
+}
+
+.TagsAdministrationTable .FourthColumn{
+    width:40px;
+    text-align:center;
+}
+
+.TagsAdministrationTable .FourthColumn .Button{
+    vertical-align:middle;
+    margin: 0px;
+}
+
+.TagsAdministrationTable .ImageButton{
+    height:16px;
+    width:16px;
+    display:inline-block;
+    margin-right:6px;
+}

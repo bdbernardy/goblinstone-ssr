@@ -1,0 +1,9 @@
+.cache/
+.*
+
+assets/
+client/
+node_modules/
+src/
+server/lib/
+server/webpack.config.server.js

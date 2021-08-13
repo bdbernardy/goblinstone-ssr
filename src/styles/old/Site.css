@@ -1,0 +1,518 @@
+﻿/*Removing all the Default junk*/
+* {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    padding: 0px;
+    border-spacing:0px;
+    margin: 0px;
+}
+
+/* ---------------- Fonts ---------------- */
+body{
+    font-size: 92.8%; /* Base font size: 14px */
+    font-family: Cambria;
+}
+
+h1 {
+    font-weight:bolder;
+    font-size: 180%; /*"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 150%;
+    font-weight:bold;
+}
+
+h3 {
+    font-size: 120%;
+    font-weight:bold;
+}
+
+
+.SmallFont {
+    font-size: 60%;
+    vertical-align:middle;
+}
+
+.Bold {
+    font-weight:bold
+}
+
+/*-------------------- Indent --------------------*/
+ul.Indent {
+    margin-left: 25px;
+}
+
+ul.Indent li {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    ul.Indent {
+    margin-left: 15px;
+}
+
+    ul.Indent li {
+        margin-left: 10px;
+    }
+}
+
+
+
+p.Indent{
+    text-indent: 20px;
+}
+
+div.Indent{
+    margin-left:20px;
+}
+
+/*-------------------- Align --------------------*/
+.AlignRight {
+    text-align:right;
+}
+
+.AlignCenter {
+    text-align:center;
+}
+
+.AlignLeft {
+    text-align:right;
+}
+
+/*---------------- Buttons ----------------*/
+.Button {
+    text-decoration:none;
+    color:black;
+    border: none;
+    display:inline-block;
+    font-weight:500;
+    cursor:pointer;
+    margin-top:15px;
+    text-align:center;
+    padding: 8px 10px;
+    background-color:#e7e5e3;
+    border-radius:5px;
+    font-family: Cambria;
+}
+
+.Button.RightMargin{
+    margin-right:4px;
+}
+
+.ButtonImage {
+    margin-top:15px;
+    text-decoration:none;
+    color:black;
+    border: none;
+    display:block;
+    font-weight:500;
+    cursor:pointer;
+    max-width:100%;
+    max-height:36px;
+}
+
+.ButtonImage img {
+    max-width:100%;
+    border-radius:5px;
+    max-height:36px;
+}
+
+.Button.NoMargin {
+     margin-top:0px;
+ }
+
+a.Button:visited, a.Button:active {
+    text-decoration:none;
+    color:black;
+}
+
+.Button:hover, a.Button:hover {
+    background-color:#d7d5d3;
+ }
+
+.NewsReadMore{
+    margin: 5px 0px;
+}
+
+.Button.Progress {
+    padding:0px;
+}
+
+.Button.Progress .TextPart{
+    padding: 8px 10px;
+}
+
+.Button.Progress .ProgressPart {
+    position:relative;
+}
+
+.Button.Progress .ProgressPart .ProgressWrapper {
+    position:absolute;
+    text-align:center;
+    width:100%;
+}
+
+.Button.Progress .ProgressPart img {
+    height:24px;
+    margin-top:4px;
+}
+
+.Button.ReadMore {
+    margin-top:25px;
+    padding: 12px 15px;
+    font-weight:bold;
+}
+
+
+/* ---------------- Misc ---------------- */
+ .ClearBoth {
+     clear:both;
+ }
+
+ .NoWrap {
+    white-space: nowrap;
+}
+
+/*---------------- More Buttons ----------------*/
+ .MoreRows {
+    text-decoration:none;
+    color:black;
+    padding: 8px 0px;
+    background-color:#e7e5e3;
+    border-radius:5px;
+    font-weight:500;
+    cursor:pointer;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:30px;
+    display:block;
+    text-align:center;
+}
+
+a.MoreRows:visited, a.MoreRows:active {
+    text-decoration:none;
+    color:black;
+}
+
+.MoreRows:hover, .MoreRows:hover {
+     background-color:#d7d5d3;
+     color:white;
+ }
+
+.RelativePosition {
+    position:relative;
+}
+
+/*---------------- Progress Bars ----------------*/
+.ProgressBar {
+    padding:15px 0px;
+    text-align:center;
+}
+
+.ProgressBar Img {
+    display:inline-block;
+    width:250px;
+    height:auto;
+}
+
+/* ---------------- Margins ---------------- */
+.SmallTopMargin {
+    margin-top:5px;
+}
+
+.MediumTopMargin {
+    margin-top:10px;
+}
+
+.LargeTopMargin {
+    margin-top:15px;
+}
+
+.ExtraLargeTopMargin {
+    margin-top:20px;
+}
+
+.UpperTopMargin {
+    margin-top:20px;
+}
+
+.BlockTopMargin {
+    margin-top:30px;
+}
+
+.SmallLeftAndRightMargin{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.LargeLeftMargin{
+    margin-left: calc(30px + 20%);
+}
+
+.SmallLeftMargin{
+    margin-left: calc(20px + 10%);
+}
+
+/* ---------------- Error Messages ---------------- */
+.ErrorMessage {
+    color:#8c2e0b;
+}
+
+.ErrorMessageStar {
+    display: inline-block;
+    margin-left: 5px;
+    color: red;
+    padding-top: 4px;
+    font-size: 120%;
+}
+
+.ErrorMessageBox{
+    background-color:#fef5f1;
+    color:#8c2e0b;
+    border: 1px solid #ed541d;
+    padding: 5px 10px;
+}
+
+/* ---------------- Controls ---------------- */
+
+.Label{
+    margin: 5px 0px;
+    padding: 4px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.SmallLeftLabel{
+    width: calc(10px + 10%);
+    text-align: right;
+    margin: 5px 10px 5px 0px;
+    padding: 4px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.LargeLeftLabel{
+    width: calc(20px + 20%);
+    text-align: right;
+    margin: 5px 7px 5px 0px;
+    padding: 4px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ValueLabel{
+    width: calc(70px + 30%);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px 7px 5px 7px;
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px  #DDDDDD;
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10pt;
+}
+
+.TextBox {
+    width: calc(70px + 30%);
+    padding: 3.5px 7px;
+    margin-right:0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px  #DDDDDD;
+}
+
+textarea.TextBox{
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.TextBox.BoxedMultiline{
+    margin-top:10px;
+    width:calc(100% - 14px); /*The -14 px comes from the TextBox class paddding*/
+}
+
+.LargeLeftLabel.BoxedMultiline, .SmallLeftLabel.BoxedMultiline, .Label.BoxedMultiline {
+    vertical-align:top;
+}
+
+.Dropdownlist{
+    width: calc(84px + 30%);
+    padding: 2.5px 2.5px 2.5px 5px;
+    margin-right:0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px  #DDDDDD;
+}
+
+.NumericTextBox {
+    width: 50px;
+    padding: 3.5px 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 1px  #DDDDDD;
+    text-align:center;
+}
+
+span.CheckBox {
+    margin-top: 3px;
+    margin-bottom:3px;
+    padding: 6px 5px 3px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.CheckboxLabel {
+    margin-top: 3px;
+    margin-bottom:3px;
+    padding: 4px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.SubscriptionBox .CheckBox {
+        width: calc(23px + 20%);
+        text-align: right;
+}
+
+.SubscriptionBox .CheckboxLabel {
+    max-width:calc(80% - 33px);
+}
+
+.CheckboxLabel.AlignTop, span.CheckBox.AlignTop, .ValueLabel.AlignTop, .NumericTextBox.AlignTop, 
+.TextBox.AlignTop, .LargeLeftLabel.AlignTop, .SmallLeftLabel.AlignTop, .Label.AlignTop{
+    vertical-align:top;
+}
+
+.TextBox.LargeControl, .ValueLabel.LargeControl, div.LargeControl{
+    width: calc(65px + 35%);
+}
+
+.Dropdownlist.LargeControl {
+    width: calc(80px + 35%);
+}
+
+
+/* ---------------- External Link ---------------- */
+.ExternalLink {
+    display:inline-block;
+    vertical-align:middle;
+    cursor:pointer;
+    margin-left:4px;
+}
+
+img.ExternalLink, .ExternalLink img {
+    height:24px;
+}
+
+/* ---------------- Preview Box ---------------- */
+#panelPreview {
+    position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity: 0;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+#panelPreview.Toggled {
+	opacity:1;
+	pointer-events: auto;
+}
+
+#panelPreview > div {
+    width: 90%;
+    max-width: 1200px;
+    height: calc(100% - 30px);
+	margin: 30px auto 0px auto;
+    border-radius:5px;
+	background-color: #fff;
+	background: linear-gradient(#fff, #999);
+}
+
+#panelPreview iframe {
+    height:calc(100% - 40px);
+    width: calc(100% - 20px);
+    margin: 0px 10px 10px 10px;
+}
+
+#panelPreview .CloseButton {
+    display:block;
+    float:right;
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	text-align: center;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+    margin: 5px;
+    cursor:pointer;
+}
+
+#panelPreview .CloseButton:hover {background: #00d9ff;}
+
+@media screen and (max-width: 832px) {
+    .MoreRows {
+        width: 95%;
+        margin-bottom:20px;
+    }
+
+    #panelPreview > div {
+        width: 100%;
+        height: 100%;
+	    margin: 0px;
+        border-radius:0px;
+    }
+
+    #panelPreview > div a {
+        font-size:130%;
+    }
+
+    #panelPreview iframe {
+        height:calc(100% - 50px);
+        width: 100%;
+        margin: 0px;
+    }
+
+    #panelPreview .CloseButton {
+        display:block;
+        float:right;
+	    background: #606061;
+	    color: #FFFFFF;
+	    line-height: 35px;
+	    text-align: center;
+	    width: 35px;
+	    text-decoration: none;
+	    font-weight: bold;
+        margin: 10px;
+        cursor:pointer;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .MoreRows {
+        width: 100%;
+        margin-bottom:15px;
+    }
+
+    a[data-lightbox] {
+        pointer-events: none;
+    }
+}

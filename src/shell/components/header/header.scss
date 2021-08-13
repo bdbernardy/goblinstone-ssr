@@ -1,0 +1,138 @@
+@use 'Source/styles/common.scss';
+
+.page-header {
+  a, button {
+    cursor:pointer;
+    color: white;
+    font-family: Cambria;
+    font-size: 100%;
+  }
+
+  a, a:visited, a:active {
+    text-decoration:none;
+    color:white;
+  }
+}
+
+.logo-container {
+  font-weight:bolder;
+  padding: 5px 0px;
+  text-align: center;
+
+  img {
+    max-width:300px;
+    width:100%;
+  }
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  background-color: #585858;
+  background-image: linear-gradient(to bottom, #585858, #3d3d3d);
+
+  a, button {
+    font-size: 100%;
+    padding: 0px common.$screen-sm-m;
+    border: none;
+    background-color: transparent;
+  }
+
+  button:first-child {
+    border-right: 1px solid #444;
+  }
+
+  a:last-child {
+    border-left: 1px solid #444;
+  }
+
+  svg {
+    height: 22px;
+    padding: 10px 0px;
+    width: auto;    
+    fill:white;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+/* Medium Screens */
+@include common.md {
+  .logo-container {
+    padding-left: common.$screen-md-m;
+    text-align: left;
+  }
+
+  .header-menu {
+    padding: 0px;
+
+    span {
+      display: block;
+      padding-left: 10px;
+    }
+  }
+}
+
+/* Large Screens */
+@include common.lg {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    a, button {
+      color: black;
+    }
+  
+    a, a:visited, a:active {
+      color: black;
+    }
+  }
+
+  .header-menu {
+    padding: common.$screen-lg-m 0px 0px 0px;
+    background-color: transparent;
+    background-image: none;
+
+    div:first-child {
+      display: none;
+    }
+
+    button:first-child {
+      padding-left: 0px;
+      border: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    a:last-child {
+      margin-left: 5px;
+      padding: 8px;
+      border: none;
+      background-color: #e7e5e3;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #d7d5d3;
+      }
+    }
+
+    span {
+      padding-left: 5px;
+    }
+
+    svg {
+      padding: 0px;
+      fill:black;
+    }
+  }
+
+  .logo-container {
+    padding-left: 0px;
+  }
+}

@@ -1,0 +1,36 @@
+@use 'Source/styles/common.scss';
+
+.footer-container {
+  div:first-child{
+    margin-bottom: common.$screen-sm-m;
+  }
+
+  a, a:active, a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  span {
+    padding: 0px 10px;
+  }
+}
+
+@include common.md {
+  .footer-container {
+    div:first-child{
+      margin-bottom: common.$screen-md-m;
+    }
+  } 
+}
+
+@include common.lg {
+  .footer-container {
+    div:first-child{
+      margin-bottom: common.$screen-lg-m;
+    }
+  }
+}

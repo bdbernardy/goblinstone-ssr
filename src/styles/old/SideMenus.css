@@ -1,0 +1,60 @@
+﻿.SideMenu {
+    border-radius:5px;
+    background-color:white;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ccc;  
+}
+
+.SideMenu > header {
+    border-bottom: 2px solid #CCCCCC;
+    color: #222222;
+    padding: 10px;
+}
+
+.SideMenu > div {
+    padding: 10px;
+}
+
+.SideMenu .MenuItem {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    color:black;
+    font-weight:500;
+}
+
+.SideMenu .MenuItem img{
+    height: 22px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.SideMenu .MenuItem span{
+    vertical-align:middle;
+}
+
+.SideMenu .MenuItem span:hover{
+    text-decoration:underline;
+}
+
+.SideMenu .Button {
+    margin: 0px 15px;
+}
+
+.SideMenu a.MenuItem:active, .SideMenu a.MenuItem:visited{
+    text-decoration:none;
+    color:black;
+}
+
+.SideMenu .SideMenuSeparator{
+    display:block;
+    width:100%;
+}
+
+@media screen and (max-width: 800px) {
+    .SidebarAndBody .SideMenu > div {
+        display:none;
+    }
+}

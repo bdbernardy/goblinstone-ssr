@@ -1,0 +1,565 @@
+﻿/*******************************************************
+   Desktops Header
+*******************************************************/
+
+#PageHeader a {
+    cursor:pointer;
+}
+
+/* --------------- Logo --------------- */
+.LogoContainer {
+    float:left;
+    font-family:Cambria;
+    font-size:26pt;
+    font-style:normal;
+    font-weight:bolder;
+    width: 300px;
+    padding: 5px 0px 10px 25px;
+}
+
+.LogoContainer img {
+    display:block;
+    max-width:300px;
+    width:100%;
+    margin:0px auto;
+}
+
+.LogoContainer a, .LogoContainer a:visited, .LogoContainer a:active {
+    text-decoration:none;
+    color:black;
+}
+
+/* --------------- Mobil Menus ----------------- */
+.MobileMenuContainer {
+    float:right;
+    margin: 20px 20px 0px 0px;
+}
+
+/* --------------- Burger/Search Menu ----------------- */
+.BurgerButtonContainer, .SearchButtonContainer, .BurgerMenuSeparator{
+    display:none;
+}
+
+.BurgerMenuSeparator {
+    content:url("/images/BurgerMenuSeparator.png");
+}
+
+/* --------------- Login Part ----------------- */
+
+.LoginContainer {
+    float:right;
+    margin-right:20px;
+    position:relative;
+    height: 90px;
+}
+
+.AccountPopup {
+    display:none;
+    width:180px;
+}
+
+.AccountMenuToggled .AccountPopup {
+    display:block;
+    position:absolute;
+    z-index:1000;
+}
+
+.AccountPopup .Container {
+    margin-top: 5px;
+    padding: 5px;
+    position:initial;
+    background-color:#585858;
+    background:linear-gradient(to bottom, #585858, #3d3d3d);
+}
+
+.AccountPopup .Container a {
+    padding: 10px 15px;
+    display:block;
+    color:white;
+    position:initial;
+}
+
+.AccountPopup .Container .Bottom {
+    border-top: 1px solid white;
+    margin-top:5px;
+    padding-top:5px;
+}
+
+.AccountPopup .Container a:visited, .AccountPopup .Container a:active {
+    text-decoration:none;
+    color:white;
+}
+
+.AccountPopup .Container a:hover {
+    border-radius:5px;
+    background-color:#f9f9f9;
+    color:black;
+    background-image: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
+}
+
+.LoginContainer img {
+    height:22px;
+    width:auto;
+    vertical-align:middle;
+    padding: 6px 0px;
+}
+
+.LoginContainer span {
+    vertical-align:middle;
+}
+
+.LoginContainer a, .LoginContainer a:visited, .LoginContainer a:active {
+    text-decoration:none;
+    color:black;
+}
+
+.LoginContainer span:hover{
+    text-decoration:underline;
+}
+
+
+/* --------------- Shopping Cart ----------------- */
+.ShoppingCartContainer {
+    float:right;
+    
+} 
+
+.ShoppingCartContainer a {
+    display:inline-block;
+    text-decoration:none;
+    background-color:#e7e5e3;
+    border-radius:5px;
+    color:black;
+}
+
+.ShoppingCartContainer img {
+    height: 24px;
+    width:auto;
+    vertical-align:middle;
+    padding: 6px 4px 6px 10px;
+}
+
+.ShoppingCartContainer span {
+    vertical-align:middle;
+    padding: 8px 10px 8px 0px;
+    display:inline-block;
+}
+
+.ShoppingCartContainer a:visited, .ShoppingCartContainer a:active {
+    text-decoration:none;
+    color:black;
+}
+
+.ShoppingCartContainer a:hover {
+    background-color:#d7d5d3;
+}
+
+
+/* --------------- SearchPanel ----------------- */
+
+.SearchPanel {
+    float:right;
+    vertical-align:middle;
+    padding: 6.5px 20px;
+}
+
+#txtSearch {
+    width: 180px;
+    padding: 8px;
+    display: inline-block;
+    float: left;
+}
+
+
+#btnSearch {
+    display:inline-block;
+    float:right; 
+    padding: 8px 10px;
+    margin-left:12px;
+    font-weight: 500;
+    background-color:#e7e5e3;
+    border-radius:5px;
+    cursor:pointer;
+    background-color:none;
+}
+
+
+.MobileSearchPanel{
+    display: none;
+    padding: 8px 12px;
+    z-index: 100;
+    vertical-align:middle;
+    background-color:#373737;
+    background-image: linear-gradient(to bottom, #585858, #3d3d3d);
+}
+
+#txtMobileSearch {
+    padding: 8px;
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    width: calc(100% - 91px);
+}
+
+#btnMobileSearch {
+    margin: 0px;
+    display: inline-block;
+    float: right;  
+    padding: 8px 10px;
+    font-weight: 500;
+    background-color: #e7e5e3;
+    border-radius:5px;
+    cursor: pointer;
+    background-color: none;
+}
+
+#btnSearch:hover, #btnMobileSearch:hover {
+    background-color:#d7d5d3;
+}
+
+/* --------------- Menus ----------------- */
+.MainMenuContainer {
+    clear: both;
+    display: block;
+    background-color:#585858;
+    background-image: linear-gradient(to bottom, #585858, #3d3d3d);
+}
+
+.MainMenuContainer ul {
+	list-style: none;
+    text-align: left;
+    display: block;
+    padding-left: 22px;
+    float:left;
+}
+
+.MainMenuContainer li {
+    display: block;
+    border-right: 1px solid #444;
+    float:left;
+}
+
+.MainMenuContainer li > a {
+    display: block;
+    padding: 14px 10px;
+    font-weight: 500;
+    text-decoration:none; color:white;
+    cursor:pointer;
+}
+
+.MainMenuContainer li.First > a {
+    font-weight:bold;
+}
+
+.MainMenuContainer li.Last {
+    border-right: none;
+}
+
+.MainMenuContainer li > a:visited, .MainMenuContainer li > a:active {
+    text-decoration:none;
+    color:white;
+    cursor:pointer;
+}
+
+.MainMenuContainer li > a:hover {
+    background-color:#f9f9f9;
+    color:black;
+    background-image: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
+}
+
+.MainMenuContainer .DesktopMenu {
+    position:relative;
+}
+
+.DesktopMenu .SubMenus {
+    display:none;
+    background-color:white;
+    position:absolute;
+    width:188px;
+    box-shadow:0 3px 3px rgba(0,0,0,0.2);
+    z-index:10000;
+}
+
+li.Expanded.DesktopMenu .SubMenus {
+    display:block;
+}
+
+.DesktopMenu .SubMenus a {
+    display:block;
+    padding: 12px;
+    text-decoration:none;
+	color:black;
+    background-color:#f9f9f9;
+    background-image:none;
+    border-bottom:1px dotted #ccc;
+}
+
+.DesktopMenu .SubMenus a.Bottom {
+    border-bottom:none;
+}
+
+.DesktopMenu .SubMenus a:visited, .MainMenuContainer .SubMenus a:active {
+    color:black;
+    text-decoration:none;
+}
+
+.DesktopMenu .SubMenus a:hover {
+    background-color:#f9f9f9;
+    color:black;
+    background-image: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
+}
+
+
+/*******************************************************
+   Mobile Device Header
+*******************************************************/
+
+@media screen and (max-width: 832px) {
+
+/* --------------- Logo ----------------- */    
+    .LogoContainer {
+        display: block;
+        float:none;
+        padding: 5px 0px 5px 15px;
+    }
+
+    .LogoContainer a {
+        display:inline-block;
+    }
+
+    .LogoContainer a, .LogoContainer a:visited, .LogoContainer a:active {
+        text-decoration:none;
+        color:white;
+    }
+
+    .ShoppingCartContainer img, .LoginContainer img, .SearchButtonContainer img {
+        filter: invert();
+    }
+
+/* --------------- Mobile Menus ----------------- */
+    .MobileMenuContainer{
+        float:none;
+        display:block;
+        margin:0px;
+        padding-right:6px;
+        background-color:#585858;
+        background-image: linear-gradient(to bottom, #585858, #3d3d3d);
+    }
+    
+    .MainMenuContainer{
+        display:none;
+    }
+
+    .LoginContainer > a, .BurgerButtonContainer > a, .SearchButtonContainer > a, .ShoppingCartContainer > a {
+        display:inline-block;
+        background-color: transparent;
+        text-decoration: none;
+        color: white;
+        margin: 0px;
+        padding:0px 6px 0px 6px;
+    }
+
+    .LoginContainer img, .BurgerButtonContainer img, .SearchButtonContainer img, .ShoppingCartContainer img {
+        height:22px;
+        width:auto;
+        vertical-align:middle;
+        padding: 10px 6px;
+    }
+
+    .LoginContainer span, .BurgerButtonContainer span, .SearchButtonContainer span, .ShoppingCartContainer span {
+        vertical-align:middle;
+        font-size:100%;
+        padding:0px;
+        display:normal;
+    }
+
+    .LoginContainer a:visited, .BurgerButtonContainer a:visited, 
+    .SearchButtonContainer a:visited, .ShoppingCartContainer a:visited,
+    .LoginContainer a:active, .BurgerButtonContainer a:active,
+    .SearchButtonContainer a:visited, .ShoppingCartContainer a:visited {
+        text-decoration:none;
+        color:white;
+    }
+
+    .ShoppingCartContainer {
+        clear:none;
+        margin-top:0px;
+    }
+
+    .ShoppingCartContainer a {
+        background-image: none;
+    }
+
+    .ShoppingCartContainer a:hover {
+        background-color:transparent;
+        background-image: none;
+    }
+
+    .LoginContainer span:hover {
+        text-decoration:none;
+    }
+
+    .MobileMenuContainer .RightBorder{
+        border-right: 1px solid #444;
+    }
+
+/* --------------- Burger Menu Button ----------------- */
+    .BurgerButtonContainer {
+        float:left;
+        display:block;
+    }
+    
+/* --------------- Search Button ----------------- */
+    .SearchButtonContainer{
+        float:left;
+        display:block;
+    }
+
+    .SearchPanel{
+        display:none;
+    }
+
+    .MobileSearchPanel.SearchPanelToggled{
+        display:block;
+        width:calc(100% - 24px);
+        position:absolute;
+    }
+
+/* --------------- Login ----------------- */
+    .LoginContainer {
+        display:block;
+        float:right;
+        margin: 0px;
+        padding: 0px;
+    }
+
+/* --------------- Shopping Cart ----------------- */
+    .ShoppingCartContainer {
+        display:block;
+    }
+
+    .MainMenuContainer li > a, .MainMenuContainer li > a:visited,
+    .MainMenuContainer li > a:active {
+        background-image: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #PageHeader {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .MobileMenuContainer {
+        padding: 0px;
+    }
+    
+    .LogoContainer {
+        padding: 5px 0px;
+        width:100%;
+        text-align:center;
+    }
+
+    .LoginContainer span, .BurgerButtonContainer span, .SearchButtonContainer span, .ShoppingCartContainer span {
+        display:none;
+    }
+
+    .LoginContainer img, .BurgerButtonContainer img, .SearchButtonContainer img, .ShoppingCartContainer img {
+        height:22px;
+        width:auto;
+        vertical-align:middle;
+        padding: 10px 10px;
+    }
+
+    .LoginContainer .AccountPopup {
+        right:10%;
+    }
+}
+
+/*******************************************************
+   Burger Button Menus
+*******************************************************/
+
+/* Menus */
+@media screen and (max-width: 832px) {
+
+    body.BurgerMenuToggled {
+		width:100%;
+        overflow:hidden;
+        position:fixed;
+		padding-left:250px;
+    }
+
+    .BurgerMenuToggled .MainMenuContainer {
+        display: block;
+        position: absolute;
+        top: 0px;
+		left:0px;
+        width:249px;
+        background-color:#555;
+        background-image:none;
+        height:100%;
+        margin: 0px;
+        padding:0px;
+        overflow-y:auto;
+		z-index:2000;
+    }
+
+    .MainMenuContainer ul {
+	    list-style: none;
+        text-align: left;
+        display: block;
+        margin: 0px;
+        padding:0px;
+        background-color:transparent;
+    }
+
+    .MainMenuContainer li, li.Last , li.Last {
+        display: block;
+        margin: 0px;
+        float: none;
+        border: none;
+        background-color:#444;
+        background-image: none;
+    }
+
+    .MainMenuContainer li> a, .MainMenuContainer li> div> a, 
+    .MainMenuContainer li> a:visited, .MainMenuContainer li> div> a:visited,
+    .MainMenuContainer li> a:active, .MainMenuContainer li> div> a:active {
+        text-decoration:none;
+        color:white;
+        cursor:pointer;
+        display:block;
+        padding: 15px 20px;
+        font-size:100%;
+    }
+
+    .BurgerMenuSeparator{
+        display:block;
+        width:100%;
+        background-color:#444;
+    }
+
+    .MainMenuContainer li > a:hover {
+        background-color:#444;
+        color:white;
+        background-image: none;
+    }
+}
+
+/* Burger Sub Menus */
+.MainMenuContainer .MobileMenu .MenuText {
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.MainMenuContainer .MobileMenu .MenuExpanderImage {
+    height:22px;
+    vertical-align:middle;
+    display:inline-block;
+    margin-right:8px;
+}
+
+li.Expanded.MobileMenu .MenuExpanderImage {
+    transform: rotate(180deg);
+}

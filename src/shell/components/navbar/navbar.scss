@@ -1,0 +1,64 @@
+@use 'Source/styles/common.scss';
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    background-color: #444;
+  }
+
+  > div:first-child a {
+    font-weight: bolder;
+  }
+
+  a {
+    font-size: 100%;
+    display: block;
+    padding: 15px 15px 15px 20px;
+    font-weight: 500;
+  }
+
+  a, a:active, a:visited {
+    color: white;
+    text-decoration: none
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+}
+
+@include common.lg {
+  .link-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: -5px;
+
+    div {
+      background-color: transparent;
+    }
+
+    > div:last-child {
+      border: none;
+    }
+
+    a {
+      padding: 15px 10px;
+      border-right: 1px solid #444;
+    }
+
+    a:hover {
+      background-color:#f9f9f9;
+      color:black;
+      background-image: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
