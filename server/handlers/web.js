@@ -88,4 +88,4 @@ const webHandler = (serverFolder, publicFolder) => {
   }
 };
 
-module.exports.webMiddleware = webHandler;
+module.exports.webHandler = webHandler;
